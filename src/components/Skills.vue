@@ -5,7 +5,7 @@
         <li v-for="(data, index) in skills" :key="index">{{ index }}. {{ data.skill }}</li>
       </ul>
 
-      <div v-bind:class="{ alert: showAlert, 'another-class': showClass }"></div>
+      <div v-bind:style="{ backgroundColor: bgColor, with: bgWidth, height: bgHeight }"></div>
     </div>
   </div>
 </template>
@@ -19,8 +19,9 @@ export default {
         {"skill": "vue.js"},
         {"skill": "frontend developer"},
       ],
-      showAlert: true,
-      showClass: true
+      bgColor: 'yellow',
+      bgWidth: '100%',
+      bgHeight: '30px',
     }
   }
 }
